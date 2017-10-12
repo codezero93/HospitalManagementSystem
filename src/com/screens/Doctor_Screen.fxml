@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="589.0" prefWidth="668.0" style="-fx-border-color: #2980b9; -fx-border-width: 2; -fx-border-radius: 4;" stylesheets="@../main/css/AllButtons.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.screens.controllers.Doctor_Screen_Controller">
+   <children>
+      <Button layoutX="29.0" layoutY="297.0" mnemonicParsing="false" onAction="#handleAddAction" prefHeight="41.0" prefWidth="85.0" styleClass="buttonGreen" text="Add">
+         <tooltip>
+            <Tooltip text="Add a doctor" />
+         </tooltip></Button>
+      <TableView fx:id="table" layoutX="2.0" layoutY="361.0" prefHeight="264.0" prefWidth="673.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="91.0" text="Doctor Id" />
+          <TableColumn fx:id="nameC" onEditCommit="#handleNameEdit" prefWidth="113.0" text="Name" />
+            <TableColumn fx:id="genderColumn" onEditCommit="#handleGenderEdit" prefWidth="87.0" text="Gender" />
+            <TableColumn fx:id="departmentColumn" onEditCommit="#handleDepartmentEdit" prefWidth="117.0" text="Department" />
+            <TableColumn fx:id="addressColumn" onEditCommit="#handleAddressEdit" prefWidth="119.0" text="Address" />
+            <TableColumn fx:id="contactC" minWidth="0.0" onEditCommit="#handleContactEdit" prefWidth="145.0" text="Contact Number" />
+        </columns>
+         <tooltip>
+            <Tooltip text="you can edit any doctor by double clicking on desired field" />
+         </tooltip>
+      </TableView>
+      <Button layoutX="158.0" layoutY="297.0" mnemonicParsing="false" onAction="#handleDeleteAction" prefHeight="41.0" prefWidth="85.0" styleClass="buttonRed" text="Delete">
+         <tooltip>
+            <Tooltip text="delete a doctor " />
+         </tooltip>
+      </Button>
+      <Button layoutX="288.0" layoutY="297.0" mnemonicParsing="false" onAction="#handleSearchAction" prefHeight="41.0" prefWidth="85.0" styleClass="buttonPurple" text="Search">
+         <tooltip>
+            <Tooltip text="search a doctor by id" />
+         </tooltip>
+      </Button>
+      <Button layoutX="526.0" layoutY="297.0" mnemonicParsing="false" onAction="#handleShowAction" prefHeight="41.0" prefWidth="131.0" styleClass="buttonOrange" text="Show All Doctors" />
+      <Button layoutX="407.0" layoutY="297.0" mnemonicParsing="false" onAction="#handleClearAction" prefHeight="41.0" prefWidth="85.0" styleClass="buttonBlue" text="Clear">
+         <tooltip>
+            <Tooltip text="clear all fields" />
+         </tooltip>
+      </Button>
+      <TextField fx:id="idF" layoutX="135.0" layoutY="103.0" prefHeight="25.0" prefWidth="158.0" promptText="Enter doctor id" />
+      <TextField fx:id="nameF" layoutX="135.0" layoutY="140.0" prefHeight="25.0" prefWidth="158.0" promptText="Enter doctor name" />
+      <TextField fx:id="addressF" layoutX="421.0" layoutY="138.0" prefHeight="25.0" prefWidth="175.0" promptText="Enter doctor address" />
+      <Label layoutX="66.0" layoutY="107.0" text="Doctor Id:" textFill="WHITE" />
+      <Label layoutX="67.0" layoutY="144.0" text="Name:" textFill="WHITE" />
+      <ComboBox fx:id="genderCbox" layoutX="136.0" layoutY="174.0" prefHeight="25.0" prefWidth="118.0" promptText="Select gender" visibleRowCount="2" />
+      <Label layoutX="65.0" layoutY="178.0" text="Gender" textFill="WHITE" />
+      <Label layoutX="345.0" layoutY="105.0" text="Department:" textFill="WHITE" />
+      <Label layoutX="346.0" layoutY="142.0" text="Address:" textFill="WHITE" />
+      <Label layoutX="346.0" layoutY="176.0" prefHeight="17.0" prefWidth="67.0" text="ContactNo:" textFill="WHITE" />
+      <TextField fx:id="contactF" layoutX="421.0" layoutY="172.0" prefHeight="25.0" prefWidth="175.0" promptText="Enter doctor contact number" />
+      <ComboBox fx:id="departmentCbox" editable="true" layoutX="421.0" layoutY="101.0" prefHeight="25.0" prefWidth="175.0" promptText="Select department" visibleRowCount="3" />
+      <Separator layoutX="2.0" layoutY="344.0" prefHeight="17.0" prefWidth="673.0" />
+      <Separator layoutX="2.0" layoutY="280.0" prefHeight="17.0" prefWidth="673.0" />
+      <Label layoutX="130.0" layoutY="8.0" text="Doctor Information" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="45.0" />
+         </font>
+      </Label>
+      <Label layoutX="36.0" layoutY="217.0" text="Doctor patients : " textFill="WHITE" />
+      <Label layoutX="251.0" layoutY="259.0" text="Appointments of the Doctor :" textFill="WHITE" />
+      <ComboBox fx:id="patientCbox" layoutX="135.0" layoutY="213.0" onShown="#handleOnShownPatient" prefHeight="25.0" prefWidth="118.0" promptText="patients list" />
+      <ComboBox fx:id="appCbox" layoutX="420.0" layoutY="255.0" onShown="#handleOnShownApp" prefHeight="25.0" prefWidth="143.0" promptText="appointments list" />
+      <Label layoutX="380.0" layoutY="250.0" />
+      <Label layoutX="308.0" layoutY="217.0" text="Doctor's lab tests :" textFill="WHITE" />
+      <ComboBox fx:id="labCbox" layoutX="421.0" layoutY="213.0" onShown="#handleOnShownLab" prefHeight="25.0" prefWidth="143.0" promptText="lab tests list" />
+   </children>
+</AnchorPane>

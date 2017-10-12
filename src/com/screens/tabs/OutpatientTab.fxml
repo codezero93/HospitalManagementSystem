@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="603.0" prefWidth="270.0" stylesheets="@../../main/css/AllButtons.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.screens.tabs.controllers.OutpatientTabController">
+   <children>
+      <Separator layoutX="14.0" layoutY="357.0" prefHeight="4.0" prefWidth="596.0" style="-fx-background-color: white;" />
+      <Separator layoutX="21.0" layoutY="80.0" prefHeight="4.0" prefWidth="596.0" style="-fx-background-color: white;" />
+      <TableView fx:id="table" editable="true" layoutX="107.0" layoutY="368.0" prefHeight="228.0" prefWidth="419.0" style="-fx-border-color: grey; -fx-border-style: dotted;">
+         <columns>
+            <TableColumn fx:id="pidColumn" prefWidth="124.0" text="Patient ID" />
+            <TableColumn fx:id="dateColumn" onEditCommit="#handleDateEditCommit" prefWidth="160.0" text="Date" />
+            <TableColumn fx:id="labnoColumn" prefWidth="133.0" text="Lab No" />
+         </columns>
+         <effect>
+            <InnerShadow blurType="GAUSSIAN" color="#24bcd3" height="23.97" radius="12.9675" width="29.9" />
+         </effect>
+         <tooltip>
+            <Tooltip text="you can edit any desired field by double clicking on it">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Tooltip>
+         </tooltip>
+      </TableView>
+      <VBox layoutX="476.0" layoutY="97.0" prefHeight="247.0" prefWidth="100.0" spacing="20.0">
+         <children>
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#handleAddAction" prefHeight="40.0" prefWidth="100.0" styleClass="buttonGreen" text="Add" />
+            <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#handleDeleteAction" prefHeight="40.0" prefWidth="103.0" styleClass="buttonRed" text="Delete" />
+            <Button fx:id="searchButton" mnemonicParsing="false" onAction="#handleSearchAction" prefHeight="40.0" prefWidth="104.0" styleClass="buttonGrey" text="Search" />
+            <Button fx:id="clearButton" mnemonicParsing="false" onAction="#handleClearAction" prefHeight="40.0" prefWidth="100.0" styleClass="buttonMidBlue" text="Clear" />
+            <Button fx:id="showAll" mnemonicParsing="false" onAction="#handleShowAction" prefHeight="37.0" prefWidth="108.0" styleClass="buttonBlue" text="Show all" />
+         </children>
+      </VBox>
+      <VBox layoutX="228.0" layoutY="129.0" prefHeight="167.0" prefWidth="161.0" spacing="22.0">
+         <children>
+            <ComboBox fx:id="pidCbox" onShown="#handlePidOnShown" prefWidth="150.0" promptText="select a patient" />
+            <ComboBox fx:id="labCbox" onShown="#handleLabOnShown" prefWidth="150.0" promptText="select a lab test" />
+            <DatePicker fx:id="dateP" prefHeight="25.0" prefWidth="162.0" promptText="pick a date" />
+            <ComboBox fx:id="billCbox" onShown="#handleOnShownBill" prefHeight="25.0" prefWidth="111.0" promptText="bills list">
+               <tooltip>
+                  <Tooltip text="show list of bills for the selected patient" />
+               </tooltip>
+            </ComboBox>
+         </children>
+      </VBox>
+      <VBox layoutX="103.0" layoutY="133.0" prefHeight="205.0" prefWidth="116.0" spacing="30.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="124.0" text="Patient ID :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="135.0" text="Test No :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="121.0" text="Date :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="152.0" text="Bills :" textFill="WHITE" />
+         </children>
+      </VBox>
+      <Label layoutX="107.0" prefHeight="76.0" prefWidth="412.0" text="OutpatientRegistration" textFill="WHITE">
+         <font>
+            <Font name="Segoe Print" size="35.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="63.0" fitWidth="63.0" layoutX="547.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../pics/outpatient-polyclinic-512.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

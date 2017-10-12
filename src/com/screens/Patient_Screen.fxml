@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="612.0" prefWidth="665.0" stylesheets="@../main/css/TabStyle.css" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.screens.controllers.PatientScreenController">
+  <tabs>
+    <Tab fx:id="patientTab" onSelectionChanged="#handlePatientSelectionChange" text="Patients" />
+    <Tab fx:id="appointmentsTab" onSelectionChanged="#handleAppointmentsSelectionChange" text="Appointments" />
+      <Tab fx:id="inpatientTab" onSelectionChanged="#handleInpatientSelectionChange" text="Inpatient">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+         </content>
+      </Tab>
+      <Tab fx:id="outpatientTab" onSelectionChanged="#handleOutpatientSelectionChange" text="Outpatient">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>

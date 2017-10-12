@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="631.0" style="-fx-border-color: #4183D7; -fx-border-radius: 3; -fx-border-width: 3;" stylesheets="@../main/css/AllButtons.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.screens.controllers.Room_Screen_Controller">
+   <children>
+      <TableView fx:id="roomTable" editable="true" layoutX="5.0" layoutY="5.0" prefHeight="484.0" prefWidth="334.0">
+        <columns>
+          <TableColumn fx:id="roomnoColumn" prefWidth="97.0" text="RoomNo" />
+          <TableColumn fx:id="roomtypeColumn" prefWidth="118.0" text="RoomType" />
+            <TableColumn fx:id="statusColumn" prefWidth="118.0" text="Status" />
+        </columns>
+         <tooltip>
+            <Tooltip text="you can edit any record by double clicking on desired field" />
+         </tooltip>
+      </TableView>
+      <TextField fx:id="roomnoF" layoutX="426.0" layoutY="102.0" prefHeight="25.0" prefWidth="163.0" promptText="Enter roomno">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="roomtypeF" layoutX="426.0" layoutY="144.0" prefHeight="25.0" prefWidth="163.0" promptText="Enter room type">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="statusF" layoutX="426.0" layoutY="189.0" prefHeight="25.0" prefWidth="163.0" promptText="Enter status">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font></TextField>
+      <Label layoutX="357.0" layoutY="106.0" prefHeight="17.0" prefWidth="60.0" text="RoomNo:" textFill="WHITE" />
+      <Label layoutX="357.0" layoutY="148.0" text="RoomType:" textFill="WHITE" />
+      <Label layoutX="357.0" layoutY="193.0" text="Status:" textFill="WHITE" />
+      <Button layoutX="448.0" layoutY="234.0" mnemonicParsing="false" onAction="#handleAddAction" prefHeight="26.0" prefWidth="60.0" styleClass="buttonGreen" text="Add" />
+      <Button layoutX="54.0" layoutY="495.0" mnemonicParsing="false" onAction="#handleDeleteAction" prefHeight="26.0" prefWidth="86.0" styleClass="buttonRed" text="Delete" />
+      <Button layoutX="172.0" layoutY="495.0" mnemonicParsing="false" onAction="#handleShowAction" prefHeight="26.0" prefWidth="125.0" styleClass="buttonOrange" text="Show All Rooms" />
+      <Label layoutX="379.0" layoutY="5.0" prefHeight="49.0" prefWidth="234.0" text="Manage Rooms" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="34.0" />
+         </font>
+      </Label>
+      <Button layoutX="443.0" layoutY="274.0" mnemonicParsing="false" onAction="#handleSearchAction" prefHeight="26.0" prefWidth="134.0" styleClass="buttonPurple" text="Search by roomno" />
+      <Button layoutX="525.0" layoutY="234.0" mnemonicParsing="false" onAction="#handleClearAction" styleClass="buttonBlue" text="Clear" />
+      <ComboBox fx:id="inpatientCbox" layoutX="443.0" layoutY="372.0" onShown="#handleOnShown" prefHeight="25.0" prefWidth="134.0" promptText="List of inpatients" style="-fx-background-color: white;" visibleRowCount="5">
+         <tooltip>
+            <Tooltip text="Shows list of inpatients in the selected room" />
+         </tooltip></ComboBox>
+      <Label layoutX="422.0" layoutY="352.0" text="Inpatients in this room:" textFill="WHITE">
+         <font>
+            <Font name="Century Schoolbook" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

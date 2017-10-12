@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="497.0" style="-fx-background-color: white;" stylesheets="@../main/css/styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="112.0" layoutY="7.0" text="Payment Voucher">
+         <font>
+            <Font name="Comic Sans MS" size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="58.0" layoutY="192.0" text="Patient ID :">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="58.0" layoutY="226.0" text="Patient Type :">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="58.0" layoutY="158.0" prefHeight="9.0" prefWidth="41.0" text="Bill No :">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="44.0" layoutY="126.0" style="-fx-background-color: yellow;" text="Patient Information ">
+         <font>
+            <Font name="Corbel Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="267.0" layoutY="126.0" style="-fx-background-color: yellow;" text="Charges">
+         <font>
+            <Font name="Corbel Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="bnoL" layoutX="109.0" layoutY="158.0" prefHeight="17.0" prefWidth="41.0" text="label" />
+      <Label fx:id="pidL" layoutX="126.0" layoutY="192.0" text="label" />
+      <Label fx:id="ptypeL" layoutX="139.0" layoutY="226.0" text="label" />
+      <Region layoutX="44.0" layoutY="142.0" prefHeight="118.0" prefWidth="164.0" style="-fx-border-color: black; -fx-border-radius: 3; -fx-border-style: dashed; -fx-border-width: 2;" />
+      <Region layoutX="267.0" layoutY="140.0" prefHeight="251.0" prefWidth="198.0" style="-fx-border-color: black; -fx-border-style: dashed; -fx-border-radius: 3; -fx-border-width: 2;" />
+      <VBox layoutX="282.0" layoutY="150.0" prefHeight="225.0" prefWidth="100.0" spacing="15.0">
+         <children>
+            <Label text="Doctor Charge :">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+            <Label text="Medicine Charge :">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+            <Label text="Room Charge :">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+            <Label text="Operation Charge :">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+            <Label text="Nursing Charge:">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+            <Label text="Lab Charge :">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+            <Label text="Advance :">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+            <Label text="Total:">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="392.0" layoutY="146.0" prefHeight="241.0" prefWidth="71.0" spacing="15.0">
+         <children>
+            <Label fx:id="dcL" text="label" />
+            <Label fx:id="mcL" text="label" />
+            <Label fx:id="rcL" text="label" />
+            <Label fx:id="ocL" text="label" />
+            <Label fx:id="ncL" text="label" />
+            <Label fx:id="lcL" text="label" />
+            <Label fx:id="advanceL" text="label" />
+            <Label fx:id="totalL" text="label" />
+         </children>
+      </VBox>
+      <Label layoutX="25.0" layoutY="466.0" text="Date :">
+         <font>
+            <Font name="BatangChe" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="dateLabel" layoutX="68.0" layoutY="462.0" prefHeight="21.0" prefWidth="82.0" text="Label">
+         <font>
+            <Font name="BatangChe" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="156.0" layoutY="462.0" prefHeight="17.0" prefWidth="39.0" text="Time:">
+         <font>
+            <Font name="BatangChe" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="timeLabel" layoutX="195.0" layoutY="462.0" prefHeight="17.0" prefWidth="94.0" text="Label">
+         <font>
+            <Font name="BatangChe" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="340.0" layoutY="455.0" prefHeight="17.0" prefWidth="133.0" text="__________________________" underline="true" />
+      <Label layoutX="365.0" layoutY="472.0" prefHeight="17.0" prefWidth="84.0" text="Hospital Stamp" />
+      <Label layoutX="412.0" layoutY="11.0" prefHeight="43.0" prefWidth="74.0" text="Hospital Logo" />
+   </children>
+</Pane>

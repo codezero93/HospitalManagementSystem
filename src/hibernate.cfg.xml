@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hrm?zeroDateTimeBehavior=convertToNull</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">cantona93</property>
+        <mapping class="entities.Appointments"/>
+        <mapping class="entities.Room"/>
+        <mapping class="entities.Doctor"/>
+        <mapping class="entities.Patient"/>
+        <mapping class="entities.Bill"/>
+        <mapping class="entities.Lab"/>
+        <mapping class="entities.Staff"/>
+        <mapping class="entities.Account"/>
+        <mapping class="entities.Inpatient"/>
+        <mapping class="entities.Outpatient"/>
+    </session-factory>
+</hibernate-configuration>

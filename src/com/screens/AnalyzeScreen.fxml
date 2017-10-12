@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="700.0" stylesheets="@../main/css/AllButtons.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.screens.controllers.Home_Screen_Controller">
+   <children>
+      <Label layoutX="82.0" prefHeight="54.0" prefWidth="505.0" text="ANALYZE INFORMATION" textFill="WHITE">
+         <font>
+            <Font name="Engravers MT" size="31.0" />
+         </font>
+      </Label>
+      <PieChart fx:id="patientPieChart" labelLineLength="10.0" layoutX="25.0" layoutY="330.0" prefHeight="284.0" prefWidth="240.0" title="Male/Female Patients" />
+      <PieChart fx:id="staffPieChart" labelLineLength="10.0" layoutX="274.0" layoutY="337.0" prefHeight="277.0" prefWidth="422.0" title="Staff in Departments" />
+      <PieChart fx:id="doctorPieChart" labelLineLength="10.0" layoutX="274.0" layoutY="53.0" prefHeight="277.0" prefWidth="422.0" title="Doctors in deparments" />
+      <Separator layoutX="13.0" layoutY="48.0" prefHeight="3.0" prefWidth="675.0" />
+      <PieChart fx:id="roomPieChart" labelLineLength="10.0" layoutX="24.0" layoutY="62.0" prefHeight="266.0" prefWidth="240.0" title="RoomsStatus" />
+      <Button layoutX="596.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleRefreshAction" prefHeight="26.0" prefWidth="66.0" styleClass="buttonBlue" text="Refresh" />
+   </children>
+</Pane>
