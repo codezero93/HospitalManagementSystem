@@ -11,3 +11,6 @@ Download the project as zip,extract it and import it into netbeans or clone this
 
 [Hibernate](http://hibernate.org/orm/documentation) - The Object Relational Mapping used
 
+## LICENSE
+This project is licensed under the GNU License - see the [LICENSE](LICENSE) file for details
+
